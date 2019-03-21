@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>stop_game...</title>
+
+    </head>
+
+
+
+<body>
+    <input type="button" id = "start" value = "START">
+    <input type="button" id = "stop" value = "stop">
+    <h1 id = "nownow">now</h1>
+
+
+    <script>
+        function time(){
+            let ima = new Date();
+            let startTime = ima.getSeconds();
+            alert(startTime);
+            document.getElementById("nownow").innerText = ima.getSeconds() - startTime + ":"+ ima.getMilliseconds();
+        }
+
+
+
+        window.onload = function(){
+            document.getElementById("start").addEventListener("click",function(){
+                setInterval("time()",100);
+            });
+        }
+
+
+    </script>
+
+
+
+
+
+</body>>
+
+
+</html>
